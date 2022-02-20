@@ -1,0 +1,56 @@
+C51 COMPILER V9.60.0.0   MAIN                                                              02/20/2022 12:13:48 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5_8051\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE INCDIR(..\..\Nuvoton_BSP\MS51BSP_KE
+                    -IL-master\MS51FB9AE_MS51XB9AE_MS51XB9BE\Library\Device\Include;..\..\Nuvoton_BSP\MS51BSP_KEIL-master\MS51FB9AE_MS51XB9AE
+                    -_MS51XB9BE\Library\StdDriver\inc;..\..\Nuvoton_BSP\MS51BSP_KEIL-master\MS51FB9AE_MS51XB9AE_MS51XB9BE\Library\StdDriver\s
+                    -rc) DEBUG OBJECTEXTEND PRINT(.\Listings\main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          //  File Function: MS51 GPIO toggle demo code
+   2          //********************************************************************************************************
+             -***
+   3          #include "MS51_16K.H"
+   4          #include "Function_Define_MS51_16K.h"
+   5          
+   6          //----------------------------------------------------------------------------------------------//
+   7          void main (void)
+   8          {
+   9   1        long i;
+  10   1        P12_PUSHPULL_MODE;
+  11   1      
+  12   1        while(1)
+  13   1        {
+  14   2          P12 = 0;
+  15   2          for(i=0;i<10;i++)
+  16   2          {
+  17   3          _delay_();
+  18   3          }
+  19   2          P12=1;
+  20   2          for(i=0;i<10;i++)
+  21   2          {
+  22   3          _delay_();
+  23   3          }
+  24   2      
+  25   2        }
+  26   1      }
+  27          
+  28          
+  29          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    215    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       6
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
